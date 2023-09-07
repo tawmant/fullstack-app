@@ -1,10 +1,10 @@
 'use client'
-import React, { ComponentPropsWithoutRef, FC } from 'react'
+import React, { ComponentPropsWithoutRef } from 'react'
 import axios from 'axios'
 
 type TCreateButtonProps = ComponentPropsWithoutRef<'button'>
 
-const CreateButton: FC<TCreateButtonProps> = ({ children, ...props }) => {
+const CreateButton = ({ children, ...props }: TCreateButtonProps) => {
   const { className } = props
 
   const createMessage = async () => {

@@ -1,14 +1,17 @@
 import CreateButton from './CreateButton'
 
+// import axios from 'axios'
+
 async function getMessages() {
   const data = await fetch('http://localhost:8000/messages', {
-    cache: 'no-cache',
+    cache: 'no-store',
   })
   return data.json()
 }
 
 const Messages = async () => {
   const messages: any[] = await getMessages()
+  // const [messages, setMessages] = useState<any>([])
 
   return (
     <>

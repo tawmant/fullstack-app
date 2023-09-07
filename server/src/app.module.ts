@@ -6,9 +6,15 @@ import { MessageModule } from "@app/message/message.module";
 import { AppService } from "@app/app.service";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import ormconfig from "@app/ormconfig";
+import { UserModule } from "@app/user/user.module";
 
 @Module({
-  imports: [TypeOrmModule.forRoot(ormconfig), TagModule, MessageModule],
+  imports: [
+    TypeOrmModule.forRoot(ormconfig),
+    TagModule,
+    MessageModule,
+    UserModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
